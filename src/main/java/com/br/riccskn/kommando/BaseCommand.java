@@ -2,8 +2,9 @@ package com.br.riccskn.kommando;
 
 import cn.nukkit.command.Command;
 import cn.nukkit.command.CommandSender;
-import com.br.riccskn.commands.framework.enums.ErrorCodeEnum;
-import com.br.riccskn.commands.framework.exception.SubCommandException;
+
+import com.br.riccskn.kommando.enums.ErrorCodeEnum;
+import com.br.riccskn.kommando.exception.SubCommandException;
 import lombok.Getter;
 
 import java.util.Arrays;
@@ -17,8 +18,6 @@ public abstract class BaseCommand extends Command {
     private CommandSender commandSender;
 
     private Map<String, BaseSubCommand> subCommands = new HashMap<>();
-
-    List<String> aliases;
 
     private Map<ErrorCodeEnum, String> errorMessages;
 
